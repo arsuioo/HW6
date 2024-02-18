@@ -63,7 +63,7 @@ public class StatsServiceTest {
         int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 5;
-        int actualMonth = service.LessAverageSummSales(month);
+        int actualMonth = service.lessAverageSummSales(month);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
@@ -75,7 +75,7 @@ public class StatsServiceTest {
         int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 5;
-        int actualMonth = service.MoreAverageSummSales(month);
+        int actualMonth = service.moreAverageSummSales(month);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }

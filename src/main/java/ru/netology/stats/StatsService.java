@@ -50,33 +50,33 @@ public class StatsService {
     }
 
 
-    public int LessAverageSummSales(int[] temps) {     //кол-во месяцев с продажами меньше среднего
+    public int lessAverageSummSales(int[] temps) {     //кол-во месяцев с продажами меньше среднего
 
         int avergeSummMonth = averageSummSales(temps);
-        int LessAvergeSummMonth = 0;
+        int lessAvergeSummMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
             if (temps[i] < avergeSummMonth) {
-                LessAvergeSummMonth = LessAvergeSummMonth + 1;
+                lessAvergeSummMonth = lessAvergeSummMonth + 1;
             }
         }
 
-        return LessAvergeSummMonth;
+        return lessAvergeSummMonth;
     }
 
 
-    public int MoreAverageSummSales(int[] temps) {     //кол-во месяцев с продажами больше среднего
+    public int moreAverageSummSales(int[] temps) {     //кол-во месяцев с продажами больше среднего
 
         int avergeSummMonth = averageSummSales(temps);
-        int MoreAvergeSummMonth = 0;
+        int moreAvergeSummMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
             if (temps[i] > avergeSummMonth) {
-                MoreAvergeSummMonth = MoreAvergeSummMonth + 1;
+                moreAvergeSummMonth = moreAvergeSummMonth + 1;
             }
         }
 
-        return MoreAvergeSummMonth;
+        return moreAvergeSummMonth;
     }
 
 
