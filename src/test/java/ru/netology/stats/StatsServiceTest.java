@@ -10,7 +10,7 @@ public class StatsServiceTest {
     public void shouldFindMinMoth() {
         StatsService service = new StatsService();
 
-        int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 9;
         int actualMonth = service.minSales(month);
@@ -23,7 +23,7 @@ public class StatsServiceTest {
     public void shouldFindMaxMoth() {
         StatsService service = new StatsService();
 
-        int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 8;
         int actualMonth = service.maxSales(month);
@@ -35,10 +35,10 @@ public class StatsServiceTest {
     public void shouldFindSummMoth() {
         StatsService service = new StatsService();
 
-        int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 180;
-        int actualMonth = service.summSales(month);
+        long actualMonth = service.summSales(month);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
@@ -48,10 +48,10 @@ public class StatsServiceTest {
     public void shouldFindAverageSummMoth() {
         StatsService service = new StatsService();
 
-        int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 15;
-        int actualMonth = service.averageSummSales(month);
+        long actualMonth = service.averageSummSales(month);
 
         Assertions.assertEquals(expectedMonth, actualMonth);
     }
@@ -60,7 +60,7 @@ public class StatsServiceTest {
     public void shouldFindLessAverageSummMoth() {
         StatsService service = new StatsService();
 
-        int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 5;
         int actualMonth = service.lessAverageSummSales(month);
@@ -72,7 +72,7 @@ public class StatsServiceTest {
     public void shouldFindMoreAverageSummMoth() {
         StatsService service = new StatsService();
 
-        int[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] month = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMonth = 5;
         int actualMonth = service.moreAverageSummSales(month);

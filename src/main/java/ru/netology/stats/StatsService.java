@@ -1,7 +1,7 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int minSales(int[] temps) {
+    public int minSales(long[] temps) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < temps.length; i++) {
@@ -14,7 +14,7 @@ public class StatsService {
     }
 
 
-    public int maxSales(int[] temps) {        //номер месяца с максимальной суммой
+    public int maxSales(long[] temps) {        //номер месяца с максимальной суммой
         int maxMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
@@ -26,8 +26,8 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int summSales(int[] temps) {                  //сумма всех продаж
-        int summMonth = 0;
+    public long summSales(long[] temps) {                  //сумма всех продаж
+        long summMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
             summMonth = summMonth + temps[i];
@@ -37,9 +37,9 @@ public class StatsService {
     }
 
 
-    public int averageSummSales(int[] temps) {     //средняя сумма
-        int summMonth = 0;
-        int avergeSummMonth = 0;
+    public long averageSummSales(long[] temps) {     //средняя сумма
+        long summMonth = 0;
+        long avergeSummMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
             summMonth = summMonth + temps[i];
@@ -50,9 +50,9 @@ public class StatsService {
     }
 
 
-    public int lessAverageSummSales(int[] temps) {     //кол-во месяцев с продажами меньше среднего
+    public int lessAverageSummSales(long[] temps) {     //кол-во месяцев с продажами меньше среднего
 
-        int avergeSummMonth = averageSummSales(temps);
+        long avergeSummMonth = averageSummSales(temps);
         int lessAvergeSummMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
@@ -65,9 +65,9 @@ public class StatsService {
     }
 
 
-    public int moreAverageSummSales(int[] temps) {     //кол-во месяцев с продажами больше среднего
+    public int moreAverageSummSales(long[] temps) {     //кол-во месяцев с продажами больше среднего
 
-        int avergeSummMonth = averageSummSales(temps);
+        long avergeSummMonth = averageSummSales(temps);
         int moreAvergeSummMonth = 0;
 
         for (int i = 0; i < temps.length; i++) {
